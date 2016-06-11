@@ -164,8 +164,8 @@ function Enviar() {
             $('#tblList').find('tbody').append('<tr>' +
                     '<th>' + cli.cpf + '</th>' +
                     '<th>' + cli.nome + '</th>' +
-                    '<td><img src="img/edit.png"  alt = " ' + i + ' " id="btnEditar" class="btnEditar"  />   ' +
-                    '<img src="img/delete.png"  alt = " ' + i + ' " id="btnExcluir" class="btnRemover"  />' +
+                    '<td><img src="img/editar.png"  alt = " ' + i + ' " id="btnEditar" class="btnEditar"  />   ' +
+                    '<img src="img/deletar.png"  alt = " ' + i + ' " id="btnExcluir" class="btnRemover"  />' +
                     '</tr>');
             destacarLinha();
             limpar();
