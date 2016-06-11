@@ -1,0 +1,175 @@
+<html lang="pt-br">
+	<head>
+            
+            <title>Cadastro</title>
+            
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+                
+        <link href="bootstrap-3.3.6-dist/bootstrap-responsive.css" rel="stylesheet" media="screen" />
+		<link href="bootstrap-3.3.6-dist/bootstrap.css" rel="stylesheet" media="screen" />
+		<link href="bootstrap-3.3.6-dist/corpo.css" rel="stylesheet" type="text/css" />
+                
+		<script type="text/javascript" src="jquery/jquery-1.12.3.min.js" language="javascript"></script>
+		<script type="text/javascript" src="jquery/jquery.mask.js" language="javascript"></script>
+		<script type="text/javascript" src="JavaScript/validacoes.js" language="javascript"></script>
+                
+	</head>
+        <body id="body" class="form-group">	
+            <form id="formCadastro" >
+			<div>
+				<div ><br><br>
+                                    <center>
+                                        <font color="#fff" size="10" face="Verdana" >
+                                        <b>
+                                        Cadastro de Cliente
+                                        </b>
+                                        </font>
+                                    </center>
+                                    <br><br>
+				</div>
+			</div>
+			<div class="row-fluid">
+				<div class="form-group span1">                                    
+				<label for="cpf">CPF:</label>
+                               </div>
+                            
+                            <div class="form-group span4">      
+                            <input type="text" id="cpf" maxlength="14" required="required"  />
+                            </div>
+                            
+                            <div class="form-group span1">  
+                            <label for="nome">Nome:</label>
+                            </div>
+                            <div class="form-group span6">
+                            <input type="text" id="nome" required="required" minlength="5"  />
+                            </div>
+			</div>
+			<div class="row-fluid">
+                            <div class="form-group span1">
+                            <label>Estado Civil:</label>
+                            </div>
+				<div class="form-group span3">
+					<select id="estadoCivil" required>
+						<option value="" > --Escolher uma Opção-- </option>
+						<option value="solteiro" >Solteiro</option>
+						<option value="casado" >Casado</option>
+					</select>
+				</div>
+                            <div class="form-group span1">
+                                <label>Sexo:</label> 
+                            </div>
+				<div class="form-group span2">
+					<select id="sexo" required >
+						<option value=""> --Escolher Sexo-- </option>
+						<option value="masculino">Masculino</option>
+						<option value="feminino">Feminino</option>
+					</select>
+				</div>
+                            <div class="form-group span1">  
+                                <label for="telefone">Telefone:</label>
+                            </div>
+				<div class="form-group span3">
+					<input type="text" id="telefone" maxlength="12" required="required" pattern="\([0-9]{2}\) [0-9]{4}-[0-9]{4}$" title="(99)9999-9999" />
+				</div>
+			</div>
+			<div class="row-fluid">
+                            <div class="form-group span1"> 
+                            <label>CEP:</label>
+                            </div>
+				<div class="form-group span2">
+					<input type="text" id="cep" maxlength="9" required="required" pattern="\d{5}-\d{3}" title="99999-999" />
+				</div>
+                            <div class="form-group span1"> 
+                               <label>Endereço:</label> 
+                            </div>
+				<div class="form-group span8">
+					<input type="text" id="endereco" disabled />
+				</div>
+			</div>
+			<div class="row-fluid">
+                            <div class="form-group span1"> 
+                                <label>Bairro:</label>
+                            </div>
+				<div class="form-group span3">
+					<input type="text" id="bairro" disabled />
+				</div>
+                            <div class="form-group span1"> 
+                            <label>Estado:</label>
+                            </div>
+				<div class="form-group span3">
+					<input type="text" id="estado" disabled />
+				</div>
+                            <div class="form-group span1"> 
+                            <label>Cidade:</label>
+                            </div>
+				<div class="form-group span3">
+					<input type="text" id="cidade" disabled />
+				</div>
+			</div>
+			<div class="row-fluid">
+                            <div class="form-group span1"> 
+                            <label>E-mail:</label>
+                            </div>
+				<div class="form-group span5">
+					<input type="text" id="email"  required="required" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+				</div>
+                            <div class="form-group span1"> 
+                            <label>Senha:</label>
+                            </div>
+				<div class="form-group span5">
+                                    <input minlength="6"  type="password" id="senha" required/> 
+				</div>
+			</div>
+			<div class="row-fluid">
+                            <div class="form-group span1"> 
+                                <label>Obs:</label>
+                            </div>
+				<div class="form-group span11">
+                                        <textarea id="obs" class="campoObs" maxlength="200"></textarea>
+				</div>
+			</div>
+			<div class="row-fluid">
+				<div class="form-inline">
+                                   
+                                    <br><table align="center"> 
+                                        <tr>
+                                       <td width="140px"></td>
+                                       <td></td>
+                                        </tr>       
+                                        <tr>
+                                            <td>
+                                  <label>Receber Promocões:</label>   
+								  <font color="#fff" size="2"  face="Arial" >
+                                        <b>
+                                        Sim
+                                        </b>
+                                        </font>
+                                  <input id="rPromocao" class="checkbox" type="checkbox">
+								  <br>
+                                        </td>
+                                        </tr></table>
+                            <span id="mensagem" style="display:none" class="mensagem"><b><br>
+                                     A qualquer momento você poderá cancelar o recebimento dos e-mail’s de promoção 
+				 enviando um e-mail com o assunto <br>    STOP MAIL para o endereço contato@estacio.br</b>
+                              </span>       
+				</div>
+			</div><br><br>
+			<div class="row-fluid" align="center">
+                            
+                            <input id="enviar" type="submit" onsubmit="allValidar()" class="btn btn-success" value="Enviar"/>         
+				<input id="cancelar" type="reset" class="btn btn-danger" value="Cancelar"/>
+                                
+			</div>
+		</form>
+<table border="1" id="tblList" class="table"  >
+			<thead>
+				<th width="22%">CPF</th>
+				<th width="45%">Nome</th>
+                <th width="20%">Editar / Remover</th>
+			</thead>
+			<tbody id="tblDados">
+			</tbody>
+		</table>
+	</body>
+</html>

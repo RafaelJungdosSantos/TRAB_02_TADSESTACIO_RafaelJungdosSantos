@@ -1,0 +1,58 @@
+body{
+	max-width:900px;
+	margin:0 auto;
+	background-color: #FFF;
+	
+
+}
+form {
+	width: 100%;
+	background-image: url(../img/f2.jpg);
+	background-size: 920px 630px;
+	background-position: top;
+	background-repeat: no-repeat;
+	
+}
+
+label{
+	color: white;
+    font-weight: bold;
+    margin: 5px; 
+    float:center;
+    clear:center;
+}
+input[type=text], input[type=password]{
+    float:center;
+    clear:center;
+    width: 90%;
+    height:40px;
+}
+input[type=select]{
+    height:55px;
+}
+select{
+	width:100%;
+}
+textarea{
+	resize: none;
+	width:100%;
+}
+form{
+	padding:3px;
+	width:100%;
+}
+.campoObs{ 
+        width: 95%; 
+        height: 120px; 
+        resize: none
+}
+.mensagem{
+	color:red;
+}
+.destaque{
+	background-color:#5F9EA0;
+}
+#tabelaDeDados thead{
+	border: 1px solid #BEBEBE;
+       
+}
